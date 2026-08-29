@@ -1,6 +1,7 @@
 # CHRONOTRACE
 FFSTG — Forensic File System Timeline Generator
 Forensic File-System Timeline & Evidence Analyzer
+
 Digital Forensics • Incident Response • Evidence Intelligence
 
 A Python-based digital forensics tool that scans a raw disk image (`.dd`),
