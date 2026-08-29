@@ -1,6 +1,5 @@
 # CHRONOTRACE
-FFSTG — Forensic File System Timeline Generator
-Forensic File-System Timeline & Evidence Analyzer
+FFSTG — Forensic File-System Timeline & Evidence Analyzer
 
 Digital Forensics • Incident Response • Evidence Intelligence
 
