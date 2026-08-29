@@ -1,0 +1,7 @@
+pytsk3==20260715
+streamlit==1.62.0
+pandas==3.0.2
+altair==6.2.2
+reportlab==4.4.10
+Jinja2==3.1.6
+pypdf==5.9.0

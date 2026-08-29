@@ -1,0 +1,16 @@
+timestamp,event_type,path,size,deleted,severity,anomaly_rule
+2026-08-19T08:00:00,modified,/INVOICE.PDF,5030,False,HIGH,modified_before_created
+2026-08-20T09:00:00,created,/README.TXT,65,False,,
+2026-08-20T09:00:00,modified,/README.TXT,65,False,,
+2026-08-21T14:30:00,created,/NOTES.TXT,81,False,,
+2026-08-22T12:00:00,created,/INVOICE.PDF,5030,False,HIGH,modified_before_created
+2026-08-22T15:00:00,created,/_ECRET.TXT,67,True,,
+2026-08-22T15:10:00,modified,/_ECRET.TXT,67,True,,
+2026-08-23T11:00:00,created,/DOCS/REPORT.TXT,1900,False,,
+2026-08-23T11:30:00,modified,/DOCS/REPORT.TXT,1900,False,,
+2026-08-24T00:00:00,accessed,/_ECRET.TXT,67,True,,
+2026-08-24T16:45:00,modified,/NOTES.TXT,81,False,,
+2026-08-25T00:00:00,accessed,/README.TXT,65,False,,
+2026-08-25T00:00:00,accessed,/NOTES.TXT,81,False,,
+2026-08-25T00:00:00,accessed,/INVOICE.PDF,5030,False,HIGH,modified_before_created
+2026-08-25T00:00:00,accessed,/DOCS/REPORT.TXT,1900,False,,

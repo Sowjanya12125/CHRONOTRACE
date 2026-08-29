@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Regenerable disk images and reports — these are build outputs, not source.
+# test_disk.dd is rebuilt fresh by every verify_dayN.py / build_test_image.py run.
+*.dd
+*.img
+*.raw
+*.001
+timeline.csv
+timeline.json
+report.html
+report.pdf
+page-*.png
+
+# Databases (generated at runtime — regenerate rather than commit binary DB files)
+*.db
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

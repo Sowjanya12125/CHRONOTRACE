@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Forensic Timeline Report</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; margin: 40px; color: #1a1a1a; }
+  h1 { border-bottom: 3px solid #1a1a1a; padding-bottom: 8px; }
+  h2 { margin-top: 36px; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+  .meta { color: #555; font-size: 0.9em; }
+  .stats { display: flex; gap: 24px; margin: 20px 0; }
+  .stat-box { border: 1px solid #ddd; border-radius: 8px; padding: 12px 20px; text-align: center; }
+  .stat-box .num { font-size: 1.8em; font-weight: bold; }
+  .stat-box .label { font-size: 0.85em; color: #666; }
+  table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 0.88em; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f2f2f2; }
+  tr.deleted { background: #fdecea; }
+  .sev-HIGH { color: #d62728; font-weight: bold; }
+  .sev-MEDIUM { color: #ff7f0e; font-weight: bold; }
+  .sev-LOW { color: #1f77b4; font-weight: bold; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px;
+           color: white; font-size: 0.8em; font-weight: bold; }
+</style>
+</head>
+<body>
+  <h1>Forensic File System Timeline Report</h1>
+  <p class="meta">Generated 2026-08-28 19:49:24 &middot; Image: test_disk.dd</p>
+
+  <div class="stats">
+    <div class="stat-box"><div class="num">15</div><div class="label">Timeline events</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="label">Files</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Deleted files recovered</div></div>
+    <div class="stat-box"><div class="num">1</div><div class="label">Files with anomalies</div></div>
+  </div>
+
+  <h2>Anomaly Findings</h2>
+  
+  <table>
+    <tr><th>Severity</th><th>File</th><th>Rule</th><th>Detail</th></tr>
+    
+    <tr>
+      <td><span class="badge" style="background:#d62728">HIGH</span></td>
+      <td>/INVOICE.PDF</td>
+      <td>modified_before_created</td>
+      <td>modified 2026-08-19 08:00:00 is 3 days, 4:00:00 earlier than created 2026-08-22 12:00:00 — possible timestamp tampering</td>
+    </tr>
+    
+  </table>
+  
+
+  <h2>Recovered Deleted Files</h2>
+  
+  <table>
+    <tr><th>Path</th><th>Size</th><th>Created</th><th>Modified</th><th>Content recovered</th></tr>
+    
+    <tr>
+      <td>/_ECRET.TXT</td>
+      <td>67</td>
+      <td>2026-08-22 15:00:00</td>
+      <td>2026-08-22 15:10:00</td>
+      <td>Yes</td>
+    </tr>
+    
+  </table>
+  
+
+  <h2>Full Timeline (15 events)</h2>
+  <table>
+    <tr><th>Timestamp</th><th>Event</th><th>Path</th><th>Size</th><th>Deleted</th><th>Severity</th></tr>
+    
+    <tr class="">
+      <td>2026-08-19 08:00:00</td>
+      <td>modified</td>
+      <td>/INVOICE.PDF</td>
+      <td>5030</td>
+      <td></td>
+      <td class="sev-HIGH">HIGH</td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-20 09:00:00</td>
+      <td>created</td>
+      <td>/README.TXT</td>
+      <td>65</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-20 09:00:00</td>
+      <td>modified</td>
+      <td>/README.TXT</td>
+      <td>65</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-21 14:30:00</td>
+      <td>created</td>
+      <td>/NOTES.TXT</td>
+      <td>81</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-22 12:00:00</td>
+      <td>created</td>
+      <td>/INVOICE.PDF</td>
+      <td>5030</td>
+      <td></td>
+      <td class="sev-HIGH">HIGH</td>
+    </tr>
+    
+    <tr class="deleted">
+      <td>2026-08-22 15:00:00</td>
+      <td>created</td>
+      <td>/_ECRET.TXT</td>
+      <td>67</td>
+      <td>Yes</td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="deleted">
+      <td>2026-08-22 15:10:00</td>
+      <td>modified</td>
+      <td>/_ECRET.TXT</td>
+      <td>67</td>
+      <td>Yes</td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-23 11:00:00</td>
+      <td>created</td>
+      <td>/DOCS/REPORT.TXT</td>
+      <td>1900</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-23 11:30:00</td>
+      <td>modified</td>
+      <td>/DOCS/REPORT.TXT</td>
+      <td>1900</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="deleted">
+      <td>2026-08-24 00:00:00</td>
+      <td>accessed</td>
+      <td>/_ECRET.TXT</td>
+      <td>67</td>
+      <td>Yes</td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-24 16:45:00</td>
+      <td>modified</td>
+      <td>/NOTES.TXT</td>
+      <td>81</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-25 00:00:00</td>
+      <td>accessed</td>
+      <td>/README.TXT</td>
+      <td>65</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-25 00:00:00</td>
+      <td>accessed</td>
+      <td>/NOTES.TXT</td>
+      <td>81</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-25 00:00:00</td>
+      <td>accessed</td>
+      <td>/INVOICE.PDF</td>
+      <td>5030</td>
+      <td></td>
+      <td class="sev-HIGH">HIGH</td>
+    </tr>
+    
+    <tr class="">
+      <td>2026-08-25 00:00:00</td>
+      <td>accessed</td>
+      <td>/DOCS/REPORT.TXT</td>
+      <td>1900</td>
+      <td></td>
+      <td class=""></td>
+    </tr>
+    
+  </table>
+</body>
+</html>

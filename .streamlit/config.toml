@@ -1,0 +1,15 @@
+# Real Streamlit theme (not CSS overrides) - this is what actually
+# changes button colors, slider handles, input borders, selected tag
+# colors, etc. CSS alone can't reach some of these internal components
+# reliably across Streamlit versions; the theme engine can.
+
+[theme]
+base = "light"
+primaryColor = "#2c5f8a"
+backgroundColor = "#f7f8fa"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1c2430"
+font = "sans serif"
+
+[server]
+maxUploadSize = 1500
